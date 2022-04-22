@@ -1,0 +1,48 @@
+@import "./colors";
+
+$box-shadow: 0 1px 12px rgba($black, 0.4);
+
+// paragraph style
+%heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $headcolor;
+  margin-bottom: 25px;
+  @media (min-width: 320px) and (max-width: 768px) {
+  }
+}
+
+// paragraph style
+%p {
+  line-height: 2;
+  font-size: 1.2rem;
+  @media (min-width: 320px) and (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+%before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.5);
+}
+
+%formButton {
+  display: block;
+  width: 50%;
+  margin: 30px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: $maincolor;
+  color: $white;
+  text-transform: capitalize;
+  transition: 0.3s;
+  &:hover,
+  &:focus {
+    box-shadow: inset -9em 0 0 0 $textcolor, inset 9em 0 0 0 $textcolor;
+  }
+}
